@@ -1,0 +1,75 @@
+=====================================================
+Task (2)
+
+1.   
+	using System.Diagnostics;
+        Console.WriteLine("Enter the maximum number you want to sum:");
+        int number;
+
+       
+        while (!int.TryParse(Console.ReadLine(), out number) || number <= 0)
+        {
+            Console.WriteLine("Invalid input. Please enter a positive integer:");
+        }
+
+
+        int sum = 0;
+        Stopwatch stopwatch = Stopwatch.StartNew();
+
+        for (int i = 1; i <= number; i++)
+        {
+            sum += i;
+        }
+
+        stopwatch.Stop();
+        Console.WriteLine($"Sum using for loop: {sum}");
+        Console.WriteLine($"Elapsed forLoopTime (milliseconds): 	{stopwatch.Elapsed.TotalMilliseconds}");
+
+ 
+        Stopwatch stopwatch2 = Stopwatch.StartNew();
+
+        int newSum = number * (number + 1) / 2;
+
+        stopwatch2.Stop();
+        Console.WriteLine($"Sum using formula: {newSum}");
+        Console.WriteLine($"Elapsed formulaTime (milliseconds): 	{stopwatch2.Elapsed.TotalMilliseconds}");
+
+
+2.
+	string? maximumNumberFromUser;
+	maximumNumberFromUser = Console.ReadLine();
+
+	int number;
+
+	while (!int.TryParse(maximumNumberFromUser, out number))
+	{
+   	 Console.WriteLine("Enter a Valid Number.");
+   	 maximumNumberFromUser = Console.ReadLine();
+	}
+
+	int maximumNumberInt = Convert.ToInt32(maximumNumberFromUser);
+
+
+======================================================================
+Task (3)
+
+1.		
+	for (int i = 1; i <= maximumNumberInt; i++)
+	{
+   	 if (i == maximumNumberInt)
+    	{
+      	  numbers = numbers + i.ToString();
+       	  break;
+    	}
+  	  numbers = numbers + i.ToString() + ",";
+	}
+
+		
+2.
+Using normal string concatenation → O(n^2)
+
+Using StringBuilder → O(n)
+
+3. 
+when you create a stringbuilder, it allocates a certaub amount of memory, if the stringbulder exceeds its capacity, it autoatically allocates more memory.
+istead if creating a new string, it modifies the existing string.
