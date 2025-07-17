@@ -1,0 +1,62 @@
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+.navbar {
+    margin-bottom: 30px;
+    background-color: #343a40 !important; /* Darker navbar */
+}
+
+.jumbotron {
+    background-color: #ffffff; /* White background for jumbotron */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    padding: 40px;
+}
+
+h1, h2, h3 {
+    color: #0056b3; /* IKEA-like blue */
+}
+
+.table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures rounded corners on table */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.thead-dark th {
+    background-color: #0056b3; /* Dark blue header */
+    border-color: #0056b3;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Standard Bootstrap blue */
+    border-color: #007bff;
+}
+
+.btn-success {
+    background-color: #28a745; /* Standard Bootstrap green */
+    border-color: #28a745;
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Standard Bootstrap yellow */
+    border-color: #ffc107;
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Standard Bootstrap red */
+    border-color: #dc3545;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.form-control {
+    border-radius: 5px;
+}
